@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+/* header */
+header {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    /* top: -20px; */
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#cursor {
+    position: fixed;
+    z-index: 99999;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #95c11e;
+    transition: all 0.2s ease;
+
+}
+
+.nav>img {
+    height: 65px;
+    padding: 0 0 0 150px;
+
+}
+
+.nav a {
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    bottom: 30px;
+    text-decoration: none;
+}
+
+/* hero section */
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -5;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 100vw;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#page1 h1 {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    -webkit-text-stroke: 1.5px #95c11e;
+    z-index: -1;
+    transform: translate(-4px, -4px);
+    /* New property */
+}
+
+#page1 h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#page1 p {
+    font-size: 15px;
+    font-weight: 500;
+    width: 60vw;
+    text-align: center;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#page2 marquee {
+    font-size: 100px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px #95c11e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 5s linear infinite;
+    transition: all linear 0.4s;
+}
+
+#page2 marquee:hover {
+    color: #95c11e;
+}
+
+#about-us {
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+#about-us img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 50%;
+}
+
+#about-us-in h3 {
+    font-size: 40px;
+    font-weight: 800px;
+    margin-bottom: 40px;
+}
+
+#about-us-in {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 60vh;
+    width: 100vw;
+
+}
+
+.card {
+    height: 80%;
+    width: 22%;
+    /* background-color: #95c11e; */
+    border-radius: 10px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    overflow: none;
+    transition: all linear 2s;
+}
+
+#card1 {
+    background-image: url(Assests/card1.avif);
+}
+
+#card2 {
+    background-image: url(Assests/card2.webp);
+}
+
+#card3 {
+    background-image: url(Assests/card3.avif);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #95c11e;
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: all linear 2s;
+    opacity: 0;
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 900px;
+    text-wrap: nowrap;
+    text-transform: uppercase;
+}
+
+.overlay p {
+    margin-top: 20px;
+    color: #000;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(1, 1, 0, 15deg);
+}
+
+#green-div {
+    height: 30vh;
+    width: 100vw;
+    background: linear-gradient(#95c11e,rgb(215, 215, 106));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+#green-div h4 {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+}
+
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+}
